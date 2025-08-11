@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Expense Tracker - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🔲 Overlay Content Wrapper -->
+  <div class="overlay">
+
+    <!-- 🧾 Page Title -->
+    <h1>All Expenses</h1>
+
+    <!-- 👤 User Display & Logout -->
+    <div class="user-info">
+      <button id="logout-btn" class="btn logout">Logout</button>
+    </div>
+
+    <!-- 📌 Navigation Links -->
+    <div class="nav-links">
+      <a href="add.html" class="btn">Add New Expense</a>
+      <a href="report.html" class="btn">View Reports</a>
+         <a href="calculator.html" class="btn">open calculator</a>
+    </div>
+
+    <!-- 🔍 Filter Section -->
+    <section class="filter">
+      <h2>Filter by Date Spent</h2>
+      <label for="fromDate">From:
+        <input type="date" id="fromDate" />
+      </label>
+      <label for="toDate">To:
+        <input type="date" id="toDate" />
+      </label>
+      <button class="btn" onclick="filterExpenses()">Apply Filter</button>
+      <button class="btn" onclick="resetFilter()">Reset</button>
+    </section>
+
+    <!-- 📊 Expense Table Section -->
+    <section class="table-container">
+      <table id="expenses-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Currency</th>
+            <th>Category</th>
+            <th>Date Spent</th>
+            <th>Date Created</th> <!-- ✅ Added -->
+        
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="expenses-list">
+          <!-- JavaScript will fill in the data -->
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <!-- ✅ JavaScript (Loaded Last) -->
+  <script src="main.js"></script>
+</body>
+</html>

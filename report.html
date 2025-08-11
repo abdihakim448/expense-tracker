@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Expense Report</title>
+  <link rel="stylesheet" href="report.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="overlay">
+    <h1>📊 Expense Report</h1>
+
+    <!-- 🌐 Navigation -->
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="add.html">Add Expense</a>
+    </nav>
+
+    <!-- 💰 Total Expense -->
+    <h2>Total Expenses: <span id="total-expense">0.00</span></h2>
+
+    <!-- 🗓️ Breakdown -->
+    <h3>Expenses by Month and Currency</h3>
+    <div id="monthly-summary" class="summary-box">
+      <!-- JavaScript will inject summary data here -->
+    </div>
+
+    <!-- 📊 Chart -->
+    <div class="chart-container">
+      <canvas id="expenseChart"></canvas>
+    </div>
+  </div>
+
+  <script src="report.js"></script>
+</body>
+</html>
